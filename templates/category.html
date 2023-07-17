@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<li>
+    <a class="dropdown-trigger" href="/home" data-target="dropdown1"
+      >CATEGORY<i class="material-icons right">arrow_drop_down</i></a
+    >
+  </li>
+
+{% block title %}
+Welcome To Blogs
+{% endblock title %}
+
+
+{% block body %}
+<div class="container-custom">
+
+    <h3 class="text-center">{{category.title}}</h3>
+    <div class="img-container">
+        <img src="/media/{{category.image}}" class="responsive-img" style="max-height:450px;width:100%;object-fit:cover;"
+             alt="">
+    </div>
+
+    <div class="collection">
+
+        {%for p in posts %}
+        <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
+
+        {% empty %}
+
+        <h3>No posts in this category</h3>
+
+        {%endfor%}
+
+    </div>
+
+
+</div>
+{% endblock %}
+

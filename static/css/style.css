@@ -1,0 +1,31 @@
+.bg-primary{
+    background-color: #477091;
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.container-custom{
+ width: 90%, !important;;
+ margin:auto;
+
+}
+
+* { box-sizing: border-box; }
+
+.container { 
+  display: flex; 
+  flex-flow: row wrap;
+}
+
+.card-wrap {
+  flex: 0 0 33.333%;
+  display: flex;
+  padding: 10px; /* gutter width */
+}
+
+.card {
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  flex: 0 0 100%;
+}
